@@ -13,9 +13,12 @@ def divide(a, b):
         return None
     return a / b
 
+def power(a, b):
+    return a ** b
+
 def main():
     print("=== 계산기 ===")
-    print("연산자: +  -  *  /  (종료: q)")
+    print("연산자: +  -  *  /  **  (종료: q)")
 
     while True:
         print()
@@ -46,6 +49,8 @@ def main():
             result = multiply(a, b)
         elif operator == '/':
             result = divide(a, b)
+        elif operator == '**':
+            result = power(a, b)
         else:
             print(f"알 수 없는 연산자: {operator}")
             continue
